@@ -11,7 +11,7 @@ export const useLoginStore = defineStore({
     login() {
       return axios({
         method: "POST",
-        url: "http://localhost:3000/users/login",
+        url: "https://portalrealita.herokuapp.com/users/login",
         data: {
           email: this.email,
           password: this.password,

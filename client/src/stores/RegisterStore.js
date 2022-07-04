@@ -12,7 +12,7 @@ export const useRegisterStore = defineStore({
     register() {
       return axios({
         method: "POST",
-        url: "http://localhost:3000/users/register",
+        url: "https://portalrealita.herokuapp.com/users/register",
         data: {
           username: this.regUsername,
           email: this.regEmail,

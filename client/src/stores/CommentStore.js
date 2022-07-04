@@ -13,7 +13,7 @@ export const useCommentStore = defineStore({
       try {
         const { data } = await axios({
           method: "GET",
-          url: "http://localhost:3000/comments",
+          url: "https://portalrealita.herokuapp.com/comments",
           headers: {
             access_token: localStorage.getItem("access_token"),
           },
@@ -26,7 +26,7 @@ export const useCommentStore = defineStore({
     postComment() {
       return axios({
         method: "POST",
-        url: "http://localhost:3000/comments",
+        url: "https://portalrealita.herokuapp.com/comments",
         headers: {
           access_token: localStorage.getItem("access_token"),
         },
@@ -39,7 +39,7 @@ export const useCommentStore = defineStore({
     deleteComment(id) {
       return axios({
         method: "DELETE",
-        url: `http://localhost:3000/comments/${id}`,
+        url: `https://portalrealita.herokuapp.com/comments/${id}`,
         headers: {
           access_token: localStorage.getItem("access_token"),
         },
